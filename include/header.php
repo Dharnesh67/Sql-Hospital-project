@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
 			} else {
 				echo '
     <li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Admin</a></li>
-    <li class="nav-item"><a href="#" class="nav-link text-white">Doctor</a></li>
+    <li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white">Doctor</a></li>
     <li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>
     ';
 			}
