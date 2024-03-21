@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +30,6 @@
                         </div>
                         <input type="submit" name="login" value="Login" class="btn btn-success">
                     </form>
-
-
                     <p>I don't have an account <a href="Apply.php" style="text-decoration: none;">Apply Now!!!</a> </p>
                 </div>
             </div>

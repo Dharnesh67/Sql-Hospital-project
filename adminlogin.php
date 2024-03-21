@@ -2,39 +2,40 @@
 session_start();
 include("include/connection.php");
 if (isset($_POST['login'])) {
-	$username=$_POST['uname'];
-	$password=$_POST['pass'];
+	$username = $_POST['uname'];
+	$password = $_POST['pass'];
 
-	$error=array();
+	$error = array();
 
-	if(empty($username)){
-		$error['admin']="Enter username";	
-	}elseif (empty($password)) {
-		$error['admin']="Enter password";
+	if (empty($username)) {
+		$error['admin'] = "Enter username";
+	} elseif (empty($password)) {
+		$error['admin'] = "Enter password";
 	}
-	if(count($error)==0){
-		$query="SELECT *FROM admin WHERE username='$username'AND password='$password' ";
-		$result=mysqli_query($connect,$query);
+	if (count($error) == 0) {
+		$query = "SELECT *FROM admin WHERE username='$username'AND password='$password' ";
+		$result = mysqli_query($connect, $query);
 	}
-	if (mysqli_num_rows($result)==1) {
+	if (mysqli_num_rows($result) == 1) {
 		echo "<script>alert('You have logged in as admin');</script>";
-		$_SESSION['admin']=$username;
+		$_SESSION['admin'] = $username;
 		header("location:admin/index.php");
 		exit();
-		}else{
+	} else {
 		echo "<script>alert('Invalid username or password')</script>";
 	}
-	
 }
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Admin login page</title>
 </head>
+
 <body style="background-image:url(img/adminbg.jpg);background-repeat:no-repeat;background-size:cover;">
 	<?php
 	include("include/header.php");
@@ -49,11 +50,10 @@ if (isset($_POST['login'])) {
 						<div>
 							<?php
 							if (isset($error['admin'])) {
-								$sh=$error['admin'];
-								$show="<h4 class='alert alert-danger'>$sh</h4>";
-
-							}else{
-								$show="";
+								$sh = $error['admin'];
+								$show = "<h4 class='alert alert-danger'>$sh</h4>";
+							} else {
+								$show = "";
 							}
 							echo $show;
 							?>
@@ -67,7 +67,7 @@ if (isset($_POST['login'])) {
 							<input type="Password" name="pass" class="form-control">
 						</div>
 						<br>
-						<input type="submit" name="login" class="btn btn-success" value="login">
+						<input type="submit" name="login" class="btn btn-primary btn-lg" value="login">
 					</form>
 				</div>
 
@@ -77,4 +77,5 @@ if (isset($_POST['login'])) {
 	</div>
 
 </body>
+
 </html>

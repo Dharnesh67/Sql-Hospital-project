@@ -16,7 +16,7 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-info bg-info">
-		<h5 class="text-white ">Hospital Management System</h5>
+		<h5 class="text-white"><a href="index.php" style="text-decoration: none; color:aliceblue">Hospital Management System</a></h5>
 		<div class="ms-auto"></div>
 		<ul class="navbar-nav">
 			<?php
