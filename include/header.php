@@ -15,42 +15,41 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-info bg-info">
+	<nav class="navbar navbar-expand-lg navbar-info bg-primary">
 		<h5 class="text-white"><a href="index.php" style="text-decoration: none; color:aliceblue">Hospital Management System</a></h5>
 		<div class="ms-auto"></div>
 		<div class="d-flex">
-		<ul class="navbar-nav d-flex ">
-			<?php
-			if (isset($_SESSION['admin'])) {
-				$user = $_SESSION['admin'];
-				echo '
+			<ul class="navbar-nav d-flex ">
+				<?php
+				if (isset($_SESSION['admin'])) {
+					$user = $_SESSION['admin'];
+					echo '
     <li class="nav-item "><a href="#" class="nav-link text-white">' . $user . '</a></li>
     <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>
     ';
-			} else if(isset($_SESSION['doctor'])){
-				$user = $_SESSION['doctor'];
-				echo '
+				} else if (isset($_SESSION['doctor'])) {
+					$user = $_SESSION['doctor'];
+					echo '
 	<li class="nav-item "><a href="#" class="nav-link text-white">' . $user . '</a></li>
 	<li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>
 	';
-			} else if(isset($_SESSION['patient'])){
-				$user = $_SESSION['patient'];
-				echo '
+				} else if (isset($_SESSION['patient'])) {
+					$user = $_SESSION['patient'];
+					echo '
 	<li class="nav-item "><a href="#" class="nav-link text-white">' . $user . '</a></li>
 	<li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>
 	';
-			}
-			else {
-				echo '
+				} else {
+					echo '
 			
     <li class="nav-item"><a href="index.php" class="nav-link text-white">Home</a></li>
     <li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Admin</a></li>
     <li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white">Doctor</a></li>
-    <li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>
+    <li class="nav-item"><a href="patientlogin.php" class="nav-link text-white">Patient</a></li>
     ';
-			}
-			?>
-		</ul>
+				}
+				?>
+			</ul>
 		</div>
 	</nav>
 </body>

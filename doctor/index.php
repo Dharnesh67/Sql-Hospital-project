@@ -28,12 +28,12 @@ session_start();
                 </div>
                 <div class="col-md-10">
                     <!-- Doctor's Dashboard Title -->
-                    <h5 class="text-center my-1 py-3 bg-info rounded ">Doctor's Dashboard</h5>
+                    <h5 class="text-center my-1 py-3 bg-primary rounded ">Doctor's Dashboard</h5>
                     <div class="container-fluid">
                         <div class="col-md-12">
                             <div class="row">
                                 <!-- Placeholder content for Doctor's Profile -->
-                                <div class="col-md-3 my-2 bg-info mx-2" style="height:250px;">
+                                <div class="col-md-3 my-2 bg-primary mx-2" style="height:250px;">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
