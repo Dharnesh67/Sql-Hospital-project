@@ -10,10 +10,6 @@ if (isset($_POST['submit'])) {
     $country = $_POST['country'];
     $password = $_POST['password'];
     $conpass = $_POST['conpass'];
-    // $date_reg = $_POST['date_reg'];
-    // $status = $_POST['status'];
-    // $profile = $_POST['profile'];
-    // $salary = $_POST['salary'];
     $error = array();
     if (empty($fname)) {
         $error['apply'] = "Enter First Name";
@@ -81,23 +77,23 @@ if (isset($_POST['submit'])) {
                     <form method="post">
                         <div class="form-group">
                             <label>First Name</label>
-                            <input type="text" name="fname" class="form-control" autocomplete="off" placeholder="Enter First Name">
+                            <input type="text" name="fname" class="form-control" autocomplete="off" placeholder="Enter First Name" value="<?php if(isset($_POST['fname'])) echo $_POST['fname']; ?>">
                         </div>
                         <div class="form-group">
                             <label>Last Name</label>
-                            <input type="text" name="sname" class="form-control" autocomplete="off" placeholder="Enter Last Name">
+                            <input type="text" name="sname" class="form-control" autocomplete="off" placeholder="Enter Last Name" value="<?php if(isset($_POST['sname'])) echo $_POST['sname']; ?>">
                         </div>
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
+                            <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username" value="<?php if(isset($_POST['uname'])) echo $_POST['uname']; ?>">
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="text" name="email" class="form-control" autocomplete="off" placeholder="Enter Email">
+                            <input type="text" name="email" class="form-control" autocomplete="off" placeholder="Enter Email" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>">
                         </div>
                         <div class="form-group">
                             <label>Mobile No</label>
-                            <input type="text" name="mobile" class="form-control" autocomplete="off" placeholder="Enter Mobile No">
+                            <input type="text" name="mobile" class="form-control" autocomplete="off" placeholder="Enter Mobile No" value="<?php if(isset($_POST['mobile'])) echo $_POST['mobile']; ?>">
                         </div>
                         <div class="form-group">
                             <label>Gender</label>
